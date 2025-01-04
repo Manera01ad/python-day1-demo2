@@ -4,25 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Band Name Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Band Name Generator Code</h1>
-    <p>Below is the Python code for generating a band name:</p>
-    
-    <pre>
-<code>
-# Welcome message
-print("Welcome to the Band Name Generator.")
+    <h1>Welcome to the Band Name Generator</h1>
+    <p>Fill in the fields below to generate your band name!</p>
 
-# Collect inputs from the user
-print("Let's create your band name!")
-city = input("1. Which city did you grow up in?\n")
-pet = input("2. What is the name of a pet?\n")
+    <!-- Input fields for city and pet -->
+    <label for="city">1. Which city did you grow up in?</label><br>
+    <input type="text" id="city" placeholder="Enter city"><br>
 
-# Display the result
-print("\nYour band name could be:\n" + city + " " + pet)
-</code>
-    </pre>
-    
+    <label for="pet">2. What is the name of a pet?</label><br>
+    <input type="text" id="pet" placeholder="Enter pet name"><br>
+
+    <!-- Button to generate band name -->
+    <button onclick="generateBandName()">Generate Band Name</button>
+
+    <!-- Result display -->
+    <div id="result"></div>
+
+    <script>
+        // Function to generate the band name
+        function generateBandName() {
+            // Get values from input fields
+            const city = document.getElementById("city").value.trim();
+            const pet = document.getElementById("pet").value.trim();
+
+            // Check if inputs are not empty
+            if (city && pet) {
+                // Display the generated band name
+                document.getElementById("result").innerText = `Your band name could be: ${city} ${pet}`;
+            } else {
+                // Show an error message if inputs are empty
+                document.getElementById("result").innerText = "Please fill in both fields to generate a band name.";
+            }
+        }
+    </script>
 </body>
 </html>

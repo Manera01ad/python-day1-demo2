@@ -34,7 +34,7 @@
 </head>
 <body>
     <h1>Welcome to the Brand Name Generator</h1>
-    <p>Fill in the fields below to generate your band name!</p>
+    <p>Fill in the fields below to generate your Brand name!</p>
 
     <!-- Input fields for city and pet -->
     <label for="city">1. Which city did you grow up in?</label><br>
@@ -43,8 +43,8 @@
     <label for="pet">2. What is the name of a pet?</label><br>
     <input type="text" id="pet" placeholder="Enter pet name"><br>
 
-    <!-- Button to generate band name -->
-    <button onclick="generateBandName()">Generate Band Name</button>
+    <!-- Button to generate Brand name -->
+    <button onclick="generateBrandName()">Generate Brand Name</button>
 
     <!-- Result display -->
     <div id="result"></div>
@@ -53,19 +53,19 @@
     <a href="tipcalculator.html">Go to Tip Calculator</a>
 
     <script>
-        // Function to generate the band name
-        function generateBandName() {
+        // Function to generate the Brand name
+        function generateBrandName() {
             // Get values from input fields
             const city = document.getElementById("city").value.trim();
             const pet = document.getElementById("pet").value.trim();
 
             // Check if inputs are not empty
             if (city && pet) {
-                // Display the generated band name
-                document.getElementById("result").innerText = `Your band name could be: ${city} ${pet}`;
+                // Display the generated Brand name
+                document.getElementById("result").innerText = `Your Brand name could be: ${city} ${pet}`;
             } else {
                 // Show an error message if inputs are empty
-                document.getElementById("result").innerText = "Please fill in both fields to generate a band name.";
+                document.getElementById("result").innerText = "Please fill in both fields to generate a Brand name.";
             }
         }
     </script>

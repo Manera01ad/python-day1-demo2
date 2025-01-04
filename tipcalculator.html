@@ -3,13 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
+    <title>Tip Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>About Us</h1>
-    <p>Welcome to the about page. This is a second page in the same branch!</p>
-    <a href="index.html">Back to Home</a>
+    <h1>Welcome to the Tip Calculator</h1>
+    <p>Enter the details below to calculate your tip:</p>
+
+    <!-- Input fields for bill amount and tip percentage -->
+    <label for="billAmount">1. Enter the bill amount:</label><br>
+    <input type="number" id="billAmount" placeholder="Enter bill amount" step="0.01"><br>
+
+    <label for="tipPercentage">2. Enter the tip percentage (e.g., 10 for 10%):</label><br>
+    <input type="number" id="tipPercentage" placeholder="Enter tip percentage"><br>
+
+    <!-- Button to calculate the tip -->
+    <button onclick="calculateTip()">Calculate Tip</button>
+
+    <!-- Result display -->
+    <div id="result"></div>
+
+    <!-- Link to go back to Band Name Generator -->
+    <a href="index.html">Back to Band Name Generator</a>
+
+    <script>
+        // Function to calculate the tip
+        function calculateTip() {
+            // Get values from input fields
+            const billAmount = parseFloat(document.getElementById("billAmount").value);
+            const tipPercentage = parseFloat(document.getElementById("tipPercentage").value);
+
+            // Validate inputs
+            if (isNaN(billAmount) || isNaN(tipPercentage) || billAmount <= 0 || tipPercentage < 0) {
+                document.getElementById("result").innerText = "Please enter valid positive numbers for both fields.";
+                return;
+            }
+
+            // Calculate tip and total
+            const tipAmount = (billAmount * tipPercentage) / 100;
+            const totalAmount = billAmount + tipAmount;
+
+            // Display results
+            document.getElementById("result").innerHTML = `
+                <p>Tip Amount: $${tipAmount.toFixed(2)}</p>
+                <p>Total Amount (including tip): $${totalAmount.toFixed(2)}</p>
+            `;
+        }
+    </script>
 </body>
 </html>
-
 

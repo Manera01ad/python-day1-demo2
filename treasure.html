@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Island Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Treasure Island</h1>
+        <p>Your mission is to find the treasure. Make your choices wisely!</p>
+        <div id="game-output">
+            <p>You are at a crossroad. Where do you want to go?</p>
+            <button class="button" onclick="choose('left')">Left</button>
+            <button class="button" onclick="choose('right')">Right</button>
+        </div>
+    </div>
+
+    <script>
+        function choose(option) {
+            const output = document.getElementById('game-output');
+
+            if (option === 'left') {
+                output.innerHTML = `<p>You've come to a lake. There is an island in the middle of the lake. What will you do?</p>
+                                    <button class="button" onclick="choose('wait')">Wait for a boat</button>
+                                    <button class="button" onclick="choose('swim')">Swim across</button>`;
+            } else if (option === 'right') {
+                output.innerHTML = '<p>You fell into a hole. <strong>Game Over.</strong></p>';
+            } else if (option === 'wait') {
+                output.innerHTML = `<p>You arrive at the island unharmed. There is a house with three doors: one red, one yellow, and one blue. Which one will you choose?</p>
+                                    <button class="button" onclick="choose('red')">Red</button>
+                                    <button class="button" onclick="choose('yellow')">Yellow</button>
+                                    <button class="button" onclick="choose('blue')">Blue</button>`;
+            } else if (option === 'swim') {
+                output.innerHTML = '<p>You got attacked by an angry trout. <strong>Game Over.</strong></p>';
+            } else if (option === 'red') {
+                output.innerHTML = '<p>It's a room full of fire. <strong>Game Over.</strong></p>';
+            } else if (option === 'yellow') {
+                output.innerHTML = '<p>Congratulations! You found the treasure. <strong>You Win!</strong></p>';
+            } else if (option === 'blue') {
+                output.innerHTML = '<p>You enter a room of beasts. <strong>Game Over.</strong></p>';
+            } else {
+                output.innerHTML = '<p>You chose an option that doesn't exist. <strong>Game Over.</strong></p>';
+            }
+        }
+    </script>
+</body>
+</html>

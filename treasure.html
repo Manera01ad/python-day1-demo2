@@ -44,6 +44,12 @@
         .input-box button:hover {
             background-color: #0056b3;
         }
+        .treasure-img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -57,12 +63,14 @@
                 <button onclick="processInput()">Submit</button>
             </div>
         </div>
+        <img id="treasure-img" class="treasure-img" src="https://via.placeholder.com/600x400?text=Congratulations!+You+Found+the+Treasure!" alt="Treasure">
     </div>
 
     <script>
         function processInput() {
             const userInput = document.getElementById('user-input').value.toLowerCase();
             const output = document.getElementById('game-output');
+            const treasureImg = document.getElementById('treasure-img');
 
             if (userInput === 'left') {
                 output.innerHTML = `<p>You've come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat or "swim" to swim across:</p>
@@ -84,6 +92,7 @@
                 output.innerHTML = '<p>It\'s a room full of fire. <strong>Game Over.</strong></p>';
             } else if (userInput === 'yellow') {
                 output.innerHTML = '<p>Congratulations! You found the treasure. <strong>You Win!</strong></p>';
+                treasureImg.style.display = 'block';
             } else if (userInput === 'blue') {
                 output.innerHTML = '<p>You enter a room of beasts. <strong>Game Over.</strong></p>';
             } else {

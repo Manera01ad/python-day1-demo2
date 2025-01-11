@@ -11,3 +11,6 @@ https://www.khanacademy.org/computing/computer-science/cryptography/crypt/v/rand
 
 
 https://docs.python.org/3/library/random.html
+
+
+https://docs.python.org/3/tutorial/datastructures.html

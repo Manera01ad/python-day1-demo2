@@ -25,3 +25,6 @@ https://docs.python.org/3/library/functions.html
 
 
 https://peps.python.org/pep-0008/
+
+
+https://developers.google.com/edu/python/lists#for-and-in

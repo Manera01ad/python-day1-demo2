@@ -28,3 +28,5 @@ https://peps.python.org/pep-0008/
 
 
 https://developers.google.com/edu/python/lists#for-and-in
+
+https://developers.google.com/edu/python/lists#range

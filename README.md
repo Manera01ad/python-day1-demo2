@@ -26,3 +26,4 @@ https://www.w3schools.com/python/ref_list_count.asp
 
 https://www.w3schools.com/python/ref_string_lower.asp
 
+https://www.w3schools.com/python/ref_list_index.asp

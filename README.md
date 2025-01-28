@@ -1,17 +1,12 @@
 https://docs.python.org/3/tutorial/floatingpoint.html
 
-
 https://docs.python.org/3/library/random.html
-
 
 https://en.wikipedia.org/wiki/Mersenne_Twister
 
-
 https://www.khanacademy.org/computing/computer-science/cryptography/crypt/v/random-vs-pseudorandom-number-generators
 
-
 https://docs.python.org/3/library/random.html
-
 
 https://docs.python.org/3/tutorial/datastructures.html
 
@@ -21,9 +16,13 @@ https://docs.python.org/3/library/functions.html
 
 https://peps.python.org/pep-0008/
 
-
 https://developers.google.com/edu/python/lists#for-and-in
 
 https://developers.google.com/edu/python/lists#range
 
 https://www.askpython.com/python/python-import-statement
+
+https://www.w3schools.com/python/ref_list_count.asp
+
+https://www.w3schools.com/python/ref_string_lower.asp
+
